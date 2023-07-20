@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Info</title>
+
+      <style>
+         body {
+            font-family: sans-serif;
+         }
+         td,
+         th {
+            border: 1px solid rgb(110, 110, 110);
+            padding: 5px;
+         }
+         th {
+            background-color: blue;
+            color: #fff;
+         }
+         td:nth-child(3) {
+            background-color: yellow;
+         }
+         table {
+            margin: 0 auto;
+         }
+
+         form {
+            width: 500px;
+            margin: 20px auto;
+            border: 1px solid wheat;
+            padding: 20px 10px;
+         }
+         input {
+            padding: 10px;
+         }
+         button {
+            border: 1px solid navy;
+            padding: 5px 10px;
+            font-size: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+         }
+         button:active {
+            background-color: gray;
+         }
+         .fade-in-image {
+            animation: fadeIn 1s;
+         }
+         @keyframes fadeIn {
+            0% {
+               opacity: 0;
+            }
+            100% {
+               opacity: 1;
+            }
+         }
+      </style>
+      <script src="./images.js"></script>
+   </head>
+   <body>
+      <table width="800px">
+         <colgroup>
+            <col span="3" style="background-color: #d6eeee" />
+         </colgroup>
+         <tr>
+            <th align="left">Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th colspan="2">Time</th>
+         </tr>
+         <tbody>
+            <tr>
+               <td>Shashank</td>
+               <td>25 Years</td>
+               <td>MCA_NEW</td>
+               <td>1:00 Pm</td>
+               <td>2:00 PM</td>
+            </tr>
+            <tr>
+               <td>Shashank</td>
+               <td>25 Years</td>
+               <td>MCA_NEW</td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Shashank</td>
+               <td>25 Years</td>
+               <td>MCA_NEW</td>
+               <td colspan="2" align="center">No Classes for this</td>
+            </tr>
+         </tbody>
+      </table>
+
+      <form action="#" width="500px">
+         <div>
+            <label for="name">name</label>
+            <input type="text" placeholder="name" />
+         </div>
+         <div>
+            <p>Please select your favorite Web language:</p>
+
+            <input type="radio" id="html" name="fav_language" value="HTML" />
+            <label for="html">HTML</label>
+
+            <br />
+            <input type="radio" id="css" name="fav_language" value="CSS" />
+            <label for="css">CSS</label>
+
+            <br />
+
+            <input
+               type="radio"
+               id="javascript"
+               name="fav_language"
+               value="JavaScript"
+            />
+            <label for="javascript">JavaScript</label>
+
+            <br />
+
+            <input
+               type="radio"
+               id="javascript"
+               name="fav_language"
+               value="JavaScript"
+            />
+            <label for="java">Java</label>
+
+            <br />
+            <br />
+            <label for="name">Hello</label>
+            <input type="checkbox" />
+            <label for="name">Hello</label>
+            <input type="checkbox" />
+            <label for="name">Hello</label>
+            <input type="checkbox" />
+         </div>
+      </form>
+
+      <section style="width: 800px; margin: 50px auto; border: 1px solid gray">
+         <ul style="height: 200px; overflow-y: auto">
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+            <li>Hello</li>
+         </ul>
+      </section>
+
+      <section
+         style="
+            width: 800px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            padding: 20px;
+         "
+      >
+         <div>
+            <div>
+               <input type="number" name="value1" id="value1" />
+               <input type="number" name="value2" id="value2" />
+               <input
+                  type="number"
+                  name="value3"
+                  placeholder="Result"
+                  readonly
+                  id="value3"
+               />
+            </div>
+
+            <div style="display: flex; margin-top: 20px; gap: 20px">
+               <button onclick="add()">Add</button>
+            </div>
+         </div>
+      </section>
+
+      <section
+         style="
+            width: 800px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            padding: 20px;
+         "
+      >
+         <div>
+            <div style="height: 400px; object-fit: cover" class="fade-in-image">
+               <img
+                  src="https://images.pexels.com/photos/14958090/pexels-photo-14958090/free-photo-of-aerial-view-of-hills-in-the-death-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  style="
+                     object-fit: cover;
+                     height: 400px;
+                     width: 100%;
+                     transition: all 1s ease-in-out;
+                  "
+                  alt="Mountains"
+                  id="mountains"
+               />
+            </div>
+            <br />
+            <br />
+            <span
+               ><strong>Index</strong> :
+               <span id="mountains-span">default</span></span
+            >
+
+            <div style="display: flex; margin-top: 20px; height: auto">
+               <button onclick="changePic('mountains')">Suffle Image</button>
+            </div>
+            <h3 id="date"></h3>
+         </div>
+      </section>
+
+      <section
+         style="
+            width: 800px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            padding: 20px;
+         "
+      >
+         <div>
+            <div style="height: 400px; object-fit: cover" class="fade-in-image">
+               <img
+                  src="https://images.pexels.com/photos/14958090/pexels-photo-14958090/free-photo-of-aerial-view-of-hills-in-the-death-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  style="object-fit: cover; height: 400px; width: 100%"
+                  alt="mouse-events"
+                  id="mouse-events"
+               />
+            </div>
+         </div>
+      </section>
+
+      <section
+         style="
+            width: 800px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            padding: 20px;
+         "
+      >
+         <div id="remove-img">
+            <div style="height: 400px; object-fit: cover" class="fade-in-image">
+               <img
+                  src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  style="object-fit: cover; height: 400px; width: 100%"
+                  alt="remove-img"
+               />
+            </div>
+         </div>
+      </section>
+
+      <script>
+         const getValues = () => {
+            const value1 = document.getElementById("value1").value;
+            const value2 = document.getElementById("value2").value;
+
+            return { value1: parseFloat(value1), value2: parseFloat(value2) };
+         };
+         const setValue = (value) => {
+            document.getElementById("value3").value = value;
+         };
+         const add = () => {
+            const { value1, value2 } = getValues();
+            const res = value1 + value2;
+            setValue(res);
+         };
+
+         const getRandomeImage = () => {
+            const index = Math.floor(Math.random() * images.length);
+
+            return images[index];
+         };
+
+         const changePic = (id) => {
+            const image = document.getElementById(id);
+
+            const index = Math.floor(Math.random() * 11);
+
+            document.getElementById(`${id}-span`).innerHTML = index;
+
+            console.log(index);
+
+            image.src = images[index];
+         };
+
+         setInterval(() => {
+            const image = document.getElementById("mountains");
+
+            const index = Math.floor(Math.random() * 11);
+
+            document.getElementById(`mountains-span`).innerHTML = index;
+
+            image.src = images[index];
+         }, 3000);
+
+         setInterval(() => {
+            let printDate = "";
+            const date = new Date();
+            let hours =
+               date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+            let meridian = date.getHours() > 12 ? "PM" : "AM";
+            printDate =
+               hours +
+               ":" +
+               date.getMinutes() +
+               ":" +
+               date.getSeconds() +
+               ": " +
+               meridian;
+            document.getElementById("date").innerHTML = printDate;
+         }, 1000);
+
+         const mouseEventImage = document.getElementById("mouse-events");
+
+         mouseEventImage.addEventListener("mousedown", () => {
+            mouseEventImage.src = getRandomeImage();
+         });
+
+         mouseEventImage.addEventListener("mouseup", () => {
+            mouseEventImage.src = getRandomeImage();
+         });
+
+         mouseEventImage.addEventListener("mouseover", () => {
+            mouseEventImage.src = getRandomeImage();
+         });
+
+         mouseEventImage.addEventListener("mouseout", () => {
+            mouseEventImage.src = getRandomeImage();
+         });
+
+         mouseEventImage.removeEventListener("mousedown");
+         console.log("log: document.cookie", document.cookie.getValues());
+      </script>
+   </body>
+</html>

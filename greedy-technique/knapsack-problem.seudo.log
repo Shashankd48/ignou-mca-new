@@ -1,0 +1,23 @@
+function greedyKnapsack(weights, values, capacity):
+    n = length(weights)
+    ratios = createRatioList(weights, values)  // Calculate value-to-weight ratios for each item
+    sort(ratios)  // Sort items based on the ratios in descending order
+    totalWeight = 0
+    totalValue = 0
+
+    for i = 0 to n-1:
+        currentItem = ratios[i]
+        itemWeight = weights[currentItem.index]
+        itemValue = values[currentItem.index]
+
+        if totalWeight + itemWeight <= capacity:
+            // Add the entire item to the knapsack
+            totalWeight += itemWeight
+            totalValue += itemValue
+        else:
+            remainingCapacity = capacity - totalWeight
+            // Add a fraction of the item to the knapsack
+            totalValue += (itemValue / itemWeight) * remainingCapacity
+            break
+
+    return totalValue
