@@ -47,6 +47,6 @@ function merge(leftArr, rightArr) {
    return mergedArr;
 }
 
-const arr = [3, 4, 1, 2, 3, 4, 5, 9, 0, 11, 0, 1];
+const arr = [3, 34, 21, 2, 13, 14, 15, 9, 10, 11, 0, 1];
 
 console.log(mergeSort(arr));

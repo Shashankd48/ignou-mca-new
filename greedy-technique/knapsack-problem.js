@@ -2,7 +2,6 @@ function knapsackGreedy(weights, values, capacity) {
    const n = weights.length;
    const ratios = new Array(n);
 
-   console.log("rations: ", ratios);
    for (let i = 0; i < n; i++) {
       ratios[i] = {
          index: i,
